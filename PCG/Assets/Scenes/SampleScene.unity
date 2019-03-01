@@ -139,7 +139,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 0.26666668, g: 0.36862746, b: 0.5254902, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -256,8 +256,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalRotation: {x: -0.11551551, y: -0.8422756, z: 0.19971101, w: -0.48717913}
+  m_LocalPosition: {x: -338.2478, y: 292.24838, z: 607.3916}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -366,8 +366,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 737415791}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -250.63284, y: -5.6995773, z: -0.26506042}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 684453033}
@@ -416,7 +416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d26a91d63c19c046b135d6044b157f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingAmount: 1
+  buildingAmount: 89
   buildingsMaxMid: 1
   buildingBases:
   - {fileID: 100002, guid: 01cac3237d76076409a03e7ffc914586, type: 3}
@@ -427,3 +427,5 @@ MonoBehaviour:
   buildingRoofs:
   - {fileID: 0}
   - {fileID: 100000, guid: 428dbd50180453845aab32a6673090f6, type: 3}
+  terrainWidth: 0
+  terrainLength: 0
