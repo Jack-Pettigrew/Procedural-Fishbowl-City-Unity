@@ -367,7 +367,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 737415791}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -5.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 684453033}
@@ -386,7 +386,7 @@ GameObject:
   m_Layer: 0
   m_Name: Procedural Manager
   m_TagString: Untagged
-  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -416,16 +416,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d26a91d63c19c046b135d6044b157f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingAmount: 89
-  buildingsMaxMid: 1
+  buildingAmount: 50
+  buildingsMaxMid: 5
   buildingBases:
-  - {fileID: 100002, guid: 01cac3237d76076409a03e7ffc914586, type: 3}
   - {fileID: 100000, guid: 01bbdd07d37ace445a823c798d87dcda, type: 3}
   buildingMids:
-  - {fileID: 0}
-  - {fileID: 100002, guid: 5fa5fc1cf510bff4e974261588093118, type: 3}
+  - {fileID: 100000, guid: 4b4cf775cdfc0b64f8a82c1f03cf508b, type: 3}
   buildingRoofs:
-  - {fileID: 0}
   - {fileID: 100000, guid: 428dbd50180453845aab32a6673090f6, type: 3}
   terrainWidth: 0
   terrainLength: 0

@@ -1,27 +1,14 @@
 fileFormatVersion: 2
-guid: 5fa5fc1cf510bff4e974261588093118
+guid: 4b4cf775cdfc0b64f8a82c1f03cf508b
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: BezierCurve
-    100002: //RootNode
-    100004: Cylinder
-    100006: Port Hole
-    400000: BezierCurve
-    400002: //RootNode
-    400004: Cylinder
-    400006: Port Hole
+    100000: //RootNode
+    400000: //RootNode
     2100000: No Name
-    2300000: BezierCurve
-    2300002: Cylinder
-    2300004: Port Hole
-    3300000: BezierCurve
-    3300002: Cylinder
-    3300004: Port Hole
-    4300000: BezierCurve
-    4300002: Cylinder
-    4300004: Port Hole
-    2186277476908879412: ImportLogs
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Cylinder
   externalObjects: {}
   materials:
     importMaterials: 1

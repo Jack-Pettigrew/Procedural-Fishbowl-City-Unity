@@ -35,17 +35,31 @@ public class ProceduralManager : MonoBehaviour
     // Coroutine bulding PCG elements
     IEnumerator Build()
     {
+        Quaternion blenderRotationOffest = Quaternion.Euler(-90.0f, 0.0f, 0.0f);
+
         // Creates the specified amount of Buildings
         for (int i = 0; i < buildingAmount; i++)
         {
-            // Random Building Components
+            // Index for random sections
             int index = Random.Range(0, buildingBases.Count);
 
-            // pos of each building
+            // Pos of each building
             Vector3 pos = new Vector3(terrain.transform.position.x + Random.Range(0, terrainWidth), 0, terrain.transform.position.z + Random.Range(0, terrainLength));
             pos.y += Terrain.activeTerrain.SampleHeight(pos);
 
-            Instantiate(buildingBases[index], pos, Quaternion.identity);
+            // Spawn
+            Instantiate(buildingBases[index], pos, blenderRotationOffest);
+
+            pos.y += buildingBases[index].GetComponent<Renderer>().bounds.size.y;
+
+            for (int j = 0; j < Random.Range(1, buildingsMaxMid + 1); j++)
+            { 
+                Instantiate(buildingMids[index], pos, blenderRotationOffest);
+
+                pos.y += buildingMids[index].GetComponent<Renderer>().bounds.size.y;
+            }
+
+            Instantiate(buildingRoofs[index], pos, blenderRotationOffest);
 
             yield return new WaitForSeconds(0.1f);
         }
