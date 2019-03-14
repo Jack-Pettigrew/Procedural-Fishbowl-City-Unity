@@ -37,7 +37,7 @@ public class ProceduralManager : MonoBehaviour
     void Start()
     {
         TerrainInit();
-        //TerrainPCG();
+        TerrainPCG();
 
        // Start Coroutine
         StartCoroutine(Build());
@@ -51,45 +51,45 @@ public class ProceduralManager : MonoBehaviour
         terrainLength = terrain.terrainData.size.z;
     }
 
-    //void TerrainPCG()
-    //{
+    void TerrainPCG()
+    {
 
-    //    //rend = terrain.GetComponent<Renderer>();
-    //    rend = quad.GetComponent<Renderer>();
+        //rend = terrain.GetComponent<Renderer>();
+        rend = quad.GetComponent<Renderer>();
 
-    //    // Create new Texture to hold perlinNoise
-    //    noiseTex = new Texture2D(pixH, pixH);
-    //    // Create Color[] to hold color values for texture
-    //    pixel = new Color[noiseTex.width * noiseTex.height];
-    //    // Set main texture to new Texture
-    //    //rend.material.mainTexture = noiseTex;
-    //    rend.material.mainTexture = noiseTex;
+        // Create new Texture to hold perlinNoise
+        noiseTex = new Texture2D(pixH, pixH);
+        // Create Color[] to hold color values for texture
+        pixel = new Color[noiseTex.width * noiseTex.height];
+        // Set main texture to new Texture
+        //rend.material.mainTexture = noiseTex;
+        rend.material.mainTexture = noiseTex;
 
-    //    // For every pixel in noiseTex
-    //    float y = 0.0f;
-    //    while(y < noiseTex.height)
-    //    {
-    //        float x = 0.0f;
-    //        while (x < noiseTex.width)
-    //        {
-    //            // Create Coords for Perlin Noise
-    //            float xCoord = xOrg + x / noiseTex.width * perlinScale;
-    //            float yCoord = yOrg + y / noiseTex.height * perlinScale;
+        // For every pixel in noiseTex
+        float y = 0.0f;
+        while (y < noiseTex.height)
+        {
+            float x = 0.0f;
+            while (x < noiseTex.width)
+            {
+                // Create Coords for Perlin Noise
+                float xCoord = xOrg + x / noiseTex.width * perlinScale;
+                float yCoord = yOrg + y / noiseTex.height * perlinScale;
 
-    //            // Generate Perlin Noise + input to Color[] for pixels
-    //            float perlinSample = Mathf.PerlinNoise(xCoord, yCoord);
-    //            /// quick handed way of getting the index for the texture (instead of FOR loop)
-    //            pixel[(int)y * noiseTex.width + (int)x] = new Color(perlinSample, perlinSample, perlinSample);
-    //            x++;
-    //        }
-    //        y++;
-    //    }
+                // Generate Perlin Noise + input to Color[] for pixels
+                float perlinSample = Mathf.PerlinNoise(xCoord, yCoord);
+                /// quick handed way of getting the index for the texture (instead of FOR loop)
+                pixel[(int)y * noiseTex.width + (int)x] = new Color(perlinSample, perlinSample, perlinSample);
+                x++;
+            }
+            y++;
+        }
 
-    //    // Copy colored pixels to texture
-    //    noiseTex.SetPixels(pixel);
-    //    noiseTex.Apply();
+        // Copy colored pixels to texture
+        noiseTex.SetPixels(pixel);
+        noiseTex.Apply();
 
-    //}
+    }
 
     // Coroutine bulding PCG elements
 
@@ -102,7 +102,6 @@ public class ProceduralManager : MonoBehaviour
         {
             // Index for random sections
             int index = Random.Range(0, buildingBases.Count);
-
 
             // Pos of each building
             Vector3 pos = new Vector3(terrain.transform.position.x + Random.Range(0, terrainWidth), 0, terrain.transform.position.z + Random.Range(0, terrainLength));
