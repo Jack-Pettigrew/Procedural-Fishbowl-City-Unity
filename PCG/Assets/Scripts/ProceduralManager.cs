@@ -55,7 +55,7 @@ public class ProceduralManager : MonoBehaviour
             pos.y += Terrain.activeTerrain.SampleHeight(pos);
 
             // Spawn Building Base
-            Instantiate(buildingBases[index], pos, blenderRotationOffest, building.transform);
+            Instantiate(buildingBases[index], pos, blenderRotationOffest, building.transform).AddComponent<BoxCollider>();
 
             /// Account for Y bounds for building Base
             pos.y += buildingBases[index].GetComponent<Renderer>().bounds.size.y;
@@ -63,14 +63,14 @@ public class ProceduralManager : MonoBehaviour
             // Spawn Building Mids
             for (int j = 0; j < Random.Range(1, buildingsMaxMid + 1); j++)
             {
-                Instantiate(buildingMids[index], pos, blenderRotationOffest, building.transform);
+                Instantiate(buildingMids[index], pos, blenderRotationOffest, building.transform).AddComponent<BoxCollider>();
 
                 /// Account for Y bounds for building Mid
                 pos.y += buildingMids[index].GetComponent<Renderer>().bounds.size.y;
             }
 
             // Spawn Building Roof
-            Instantiate(buildingRoofs[index], pos, blenderRotationOffest, building.transform);
+            Instantiate(buildingRoofs[index], pos, blenderRotationOffest, building.transform).AddComponent<BoxCollider>();
 
             // Delay time
             yield return new WaitForSeconds(0.1f);

@@ -7,6 +7,7 @@ public class CameraManager : MonoBehaviour
     [Header("Camera Properties")]
     public float mouseSensitivity = 1.0f;
     public float cameraDistance = 10.0f;
+    public Transform lookAtTarget;
     public Transform van;
 
     private float mouseX, mouseY;
@@ -36,6 +37,6 @@ public class CameraManager : MonoBehaviour
         transform.position = van.position + rotation * distance;
 
         // Look at Van Pos
-        transform.LookAt(van.position);
+        transform.LookAt(lookAtTarget);
     }
 }
