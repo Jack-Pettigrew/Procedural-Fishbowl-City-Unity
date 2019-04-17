@@ -18,7 +18,7 @@ public class ProceduralManager : MonoBehaviour
 
     [Header("Terrain PCG")]
     public float terrainWidth, terrainLength;
-    private Terrain terrain;
+    public Terrain terrain;
 
     // Set Handles
     void Start()

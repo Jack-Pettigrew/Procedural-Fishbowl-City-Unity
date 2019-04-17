@@ -411,6 +411,56 @@ Transform:
   m_Father: {fileID: 684453033}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &944370818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 944370820}
+  - component: {fileID: 944370819}
+  m_Layer: 0
+  m_Name: L-System
+  m_TagString: Untagged
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &944370819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944370818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f991c556daa3cf54d9c8aa050af3a41b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generations: 5
+  roadHolder: {fileID: 1714547767789729115, guid: abf06eae940f75047a68005696b77841,
+    type: 3}
+  terrain: {fileID: 737415793}
+  roadPieces:
+  - {fileID: 7284088234624781432, guid: 6bda30c81856b5c44aac60594d4e9667, type: 3}
+  - {fileID: 18234063932214050, guid: db1b686cd9c9b1f488203d2b3d0c6c7a, type: 3}
+--- !u!4 &944370820
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944370818}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -20, y: 1, z: 250}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &1066685675 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1066685675, guid: bc53d76084171d643a1c7c1dde96927e,
@@ -575,3 +625,4 @@ MonoBehaviour:
   - {fileID: 6963996107744523779, guid: 936d4096716efaf4693e22fa4a2cedc5, type: 3}
   terrainWidth: 0
   terrainLength: 0
+  terrain: {fileID: 0}

@@ -24,6 +24,7 @@ public class CameraManager : MonoBehaviour
         mouseY += Input.GetAxis("Mouse Y") * mouseSensitivity;
 
         mouseY = Mathf.Clamp(mouseY, -90, 90);
+
     }
 
     // Wait for Update movements
@@ -31,7 +32,7 @@ public class CameraManager : MonoBehaviour
     {
         // Get distance + Rotation via mouse
         Vector3 distance = new Vector3(0, 0, -cameraDistance);
-        Quaternion rotation = Quaternion.Euler(-mouseY, mouseX, 0);
+        Quaternion rotation = Quaternion.Euler(-mouseY, mouseX, -mouseY);
 
         // Set position to Van + mouse rotation * desired camera distance
         transform.position = van.position + rotation * distance;
