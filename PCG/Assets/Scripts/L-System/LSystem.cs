@@ -7,6 +7,8 @@ public class LSystem : MonoBehaviour
     [Header("L-System Properties")]
     public int generations = 1;                         // Number of L-System generations
     string axiom = "F";                                 // Initial char to start with
+    public string ruleOne = "FFI";
+    public string ruleTwo = "[+FFI+FFI--FFI][-FFI-FFI++FFI]";
     string currentSentence;                             // Current sentence
     public Terrain terrain;                             // Terrain to check
 
@@ -20,8 +22,8 @@ public class LSystem : MonoBehaviour
         currentSentence = axiom;
 
         // Add Rules
-        rules.Add('F', "FFI");                                          // Forward roads + Intersection
-        rules.Add('I', "[+FFI+FFI--FFI][-FFI-FFI++FFI]");              // Add Intersection + Forward roads
+        rules.Add('F', ruleOne);                                          // Forward roads + Intersection
+        rules.Add('I', ruleTwo);              // Add Intersection + Forward roads
 
         // Generate Roads
         Generate();

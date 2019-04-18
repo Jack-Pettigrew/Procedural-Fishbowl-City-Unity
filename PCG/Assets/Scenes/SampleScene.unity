@@ -441,10 +441,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generations: 5
+  ruleOne: FFI
+  ruleTwo: '[+FFI+FFI--FFI][-FFI-FFI++FFI]'
   terrain: {fileID: 737415793}
   roadPieces:
-  - {fileID: 7284088234624781432, guid: 6bda30c81856b5c44aac60594d4e9667, type: 3}
-  - {fileID: 18234063932214050, guid: db1b686cd9c9b1f488203d2b3d0c6c7a, type: 3}
+  - {fileID: 2757489826431494207, guid: 84e5afa852e095f41bb6f51cb705ae64, type: 3}
+  - {fileID: 3806058037638663916, guid: 83007f8a001a4be4f994ddd5a99c7cb2, type: 3}
 --- !u!4 &944370820
 Transform:
   m_ObjectHideFlags: 0
@@ -453,7 +455,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944370818}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -20, y: 1, z: 250}
+  m_LocalPosition: {x: -20, y: 0.01, z: 250}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -485,12 +487,12 @@ PrefabInstance:
     - target: {fileID: 2176010892266937424, guid: 91411f1f9594572409a3c693e56c80f7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.93
       objectReference: {fileID: 0}
     - target: {fileID: 2176010892266937424, guid: 91411f1f9594572409a3c693e56c80f7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -3.01
       objectReference: {fileID: 0}
     - target: {fileID: 2176010892266937424, guid: 91411f1f9594572409a3c693e56c80f7,
         type: 3}
@@ -532,6 +534,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2176010892266937430, guid: 91411f1f9594572409a3c693e56c80f7,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 27f7b9f120ad03e468993bd792b34980, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91411f1f9594572409a3c693e56c80f7, type: 3}
 --- !u!1 &1295270888

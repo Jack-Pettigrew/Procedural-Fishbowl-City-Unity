@@ -6,34 +6,34 @@ using UnityEngine;
 public class ProceduralRock : MonoBehaviour
 {
     Mesh mesh;
+    MeshRenderer rend;
     Vector3[] originalVerts;
+    Vector3[] minVerts;
     List<Vector3> newVerts;
     int[] triangles;
     Vector3 centre;
 
-    [Range(0, 2.5f)]
-    public float vertexStrength = 1.0f;
-
-    [Range(0.0f, 5.0f)]
-    public float rockScale = 0.0f;
-
-    [Range(0.01f, 1.0f)]
-    public float rockRoundness = 1.0f;
-
-    // Get Mesh
-    // Get Perlin Noise for Vertex positions
-    // Push/Pull vertex + scalar/dampen against centre
-    // Smoothen/Sharpen Vertex point parameters
+    [Range(0, 2.0f)]
+    public float vertexVariation = 1.0f;
+    [Range(0.0f, 10.0f)]
+    public float rockThreshold = 1.0f;
 
     private void Awake()
     {
         mesh = GetComponent<MeshFilter>().mesh;
+        rend = GetComponent<MeshRenderer>();
     }
 
     private void Start()
-    {
+    { 
         originalVerts = mesh.vertices;
         triangles = mesh.triangles;
+        minVerts = mesh.vertices;
+
+        for (int i = 0; i < minVerts.Length; i++)
+        {
+            minVerts[i] *= 0.1f;
+        }
 
         newVerts = new List<Vector3>();
 
@@ -49,18 +49,20 @@ public class ProceduralRock : MonoBehaviour
 
     private void CalculateMesh()
     {
+
         newVerts.Clear();
 
-        float scalePerlin = Random.Range(0, 100000);
+        float scalePerlin = Random.Range(1, 1000);
 
         for (int i = 0; i < originalVerts.Length; i++)
-        {
-            float perlin = PerlinNoise3D(originalVerts[i].x + scalePerlin, originalVerts[i].y + scalePerlin, originalVerts[i].z + scalePerlin);
+        { 
+            float perlin = Mathf.PerlinNoise(originalVerts[i].x + scalePerlin, originalVerts[i].y + scalePerlin);
 
-            Vector3 newVertexPos = Vector3.Lerp(originalVerts[i] * rockScale, transform.position, (perlin * vertexStrength) * rockRoundness);
+            Vector3 newVertexPos = Vector3.Lerp(originalVerts[i] * rockThreshold, minVerts[i], perlin * vertexVariation);
 
             newVerts.Add(newVertexPos);
         }
+
 
         UpdateMesh();
     }
@@ -88,6 +90,7 @@ public class ProceduralRock : MonoBehaviour
         mesh.vertices = newVerts.ToArray();
         mesh.triangles = triangles;
         mesh.RecalculateNormals();
+        mesh.RecalculateTangents();
         mesh.RecalculateBounds();
     }
 
