@@ -7,7 +7,7 @@ public class RoadPieceLogic : MonoBehaviour
 
     private void OnCollisionStay(Collision other)
     {
-        if(other.gameObject.name == "Road F")
+        if(other.gameObject.tag == "Road")
         {
             transform.Translate(Vector3.forward * this.GetComponent<MeshRenderer>().bounds.size.y);
         }

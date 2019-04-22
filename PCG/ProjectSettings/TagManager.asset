@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Road
+  - Window
+  - Sign_Post
   layers:
   - Default
   - TransparentFX
