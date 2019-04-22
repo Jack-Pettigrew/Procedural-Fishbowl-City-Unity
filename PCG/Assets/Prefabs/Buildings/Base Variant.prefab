@@ -309,19 +309,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a366dcfa927c6d643a4adb1add64b43b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.000000021855694
+      value: 0.0038139084
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a366dcfa927c6d643a4adb1add64b43b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.89981407
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a366dcfa927c6d643a4adb1add64b43b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.007867762
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a366dcfa927c6d643a4adb1add64b43b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.43618608
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a366dcfa927c6d643a4adb1add64b43b, type: 3}
       propertyPath: m_RootOrder

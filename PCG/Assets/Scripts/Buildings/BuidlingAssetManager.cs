@@ -31,7 +31,7 @@ public class BuidlingAssetManager : MonoBehaviour
                     break;
 
                 case 1:
-                    Instantiate(window, item.position, item.rotation);
+                    Instantiate(window, item.position, item.rotation, GetComponentInParent<Transform>());
 
                     break;
             }
