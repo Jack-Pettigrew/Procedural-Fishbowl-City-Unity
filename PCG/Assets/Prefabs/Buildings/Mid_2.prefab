@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6078866151621800769}
   m_Layer: 0
   m_Name: Asset Space (12)
-  m_TagString: Untagged
+  m_TagString: Window
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 8233026832862984570}
   m_Layer: 0
   m_Name: Asset Space (13)
-  m_TagString: Untagged
+  m_TagString: Window
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86,7 +86,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 455124454064992781}
-  m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 16.135168, y: -0.05042267, z: 8.494321}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
@@ -158,10 +158,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84967e2f262251f44aa6b06cbd0eab39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sign_post: {fileID: 0}
   window: {fileID: 3173089354437204492, guid: e013aadf5966edc4eb7aed9faec76fa5, type: 3}
   houseSign: {fileID: 0}
   chemistSign: {fileID: 0}
+  sign_post: {fileID: 0}
 --- !u!1 &5132761328969263273
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 873156774446350053}
   m_Layer: 0
   m_Name: Asset Space (14)
-  m_TagString: Untagged
+  m_TagString: Window
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 5161586548089344793}
   m_Layer: 0
   m_Name: Asset Space (15)
-  m_TagString: Untagged
+  m_TagString: Window
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 2423653840866566906}
   m_Layer: 0
   m_Name: Asset Space (8)
-  m_TagString: Untagged
+  m_TagString: Window
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 4164524114606039663}
   m_Layer: 0
   m_Name: Asset Space (9)
-  m_TagString: Untagged
+  m_TagString: Window
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 8421322306985842009}
   m_Layer: 0
   m_Name: Asset Space (11)
-  m_TagString: Untagged
+  m_TagString: Window
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 7285290293968072058}
   m_Layer: 0
   m_Name: Asset Space (10)
-  m_TagString: Untagged
+  m_TagString: Window
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

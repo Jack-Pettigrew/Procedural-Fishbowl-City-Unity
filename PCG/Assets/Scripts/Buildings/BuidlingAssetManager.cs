@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class BuidlingAssetManager : MonoBehaviour
 {
+    public GameObject window, houseSign, chemistSign;
     public Transform sign_post;
     private Transform[] windowTransforms;
-
-    public GameObject window, houseSign, chemistSign;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +29,7 @@ public class BuidlingAssetManager : MonoBehaviour
                     break;
 
                 case 1:
-                    Instantiate(window, item.position, item.rotation, GetComponentInParent<Transform>());
+                    Instantiate(window, item.position, item.rotation).transform.SetParent(item);
 
                     break;
             }
