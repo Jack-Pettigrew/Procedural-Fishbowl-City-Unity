@@ -5,8 +5,9 @@ using UnityEngine;
 public class LSystem : MonoBehaviour
 {
     [Header("L-System Properties")]
+    public bool extendedTerrainRoad = false;            // Toggles Extended Road
     public int generations = 1;                         // Number of L-System generations
-    public string axiom = "F";                                 // Initial char to start with
+    public string axiom = "F";                          // Initial char to start with
     public string ruleOne = "FFI";
     public string ruleTwo = "[+FFI+FFI--FFI][-FFI-FFI++FFI]";
     string currentSentence;                             // Current sentence
@@ -54,7 +55,7 @@ public class LSystem : MonoBehaviour
             // Apply
             currentSentence = nextSentence;
             
-            //Debug.Log(nextSentence);
+            Debug.Log(nextSentence);
         }
 
     }
@@ -134,7 +135,7 @@ public class LSystem : MonoBehaviour
                 road = Instantiate(road, this.transform.position, this.transform.rotation);
 
                 // Destroy road piece if it's outside Terrain
-                if (!IsWithinTerrain(road))
+                if (!IsWithinTerrain(road) && !extendedTerrainRoad)
                     Destroy(road);
             }
         }

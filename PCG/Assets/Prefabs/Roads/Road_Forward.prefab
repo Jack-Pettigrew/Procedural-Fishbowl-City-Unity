@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4577468777573718336}
   - component: {fileID: 5434821785607022300}
   - component: {fileID: 8133347510558982197}
+  - component: {fileID: 4138797799071477039}
   m_Layer: 0
   m_Name: Road_Forward
   m_TagString: Road
@@ -77,3 +78,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &4138797799071477039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2757489826431494207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01d0ec68f13611e48a8887b426d70b3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingBase: {fileID: 8714599306444431989, guid: 75401ee848f3a7c4dbc82638b32dcafd,
+    type: 3}

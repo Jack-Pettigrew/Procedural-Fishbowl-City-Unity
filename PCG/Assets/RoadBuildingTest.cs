@@ -4,23 +4,50 @@ using UnityEngine;
 
 public class RoadBuildingTest : MonoBehaviour
 {
-    public GameObject buildingBase;
+    // Procedural Manager Information
+    private Transform buildingHolder;
+    private GameObject buildingFolderPrefab;
+    private int buildingAmount, buildingsMaxMid;
+    private List<List<GameObject>> buildingsTypes;
 
-    // Start is called before the first frame update
+    // Building Objects
+    public GameObject buildingBase;
+    private ProceduralManager pm;
+
+    private void Awake()
+    {
+        pm = FindObjectOfType<ProceduralManager>();
+    }
+
     void Start()
     {
-        Vector3 spawnPos = transform.position;
-        spawnPos.x -= (buildingBase.GetComponent<MeshRenderer>().bounds.size.x / 2 + GetComponent<MeshRenderer>().bounds.size.x / 2);
+        // Instantiate Road
+        Transform building = pm.BuildBuilding(this.transform);
 
-        Transform buildingTransform = Instantiate(buildingBase, spawnPos, transform.rotation).transform;
+        Vector3 crossProduct = Vector3.Cross(transform.forward, transform.up);
+        float buildingDistance = GetComponent<MeshRenderer>().bounds.size.x;
 
-        buildingTransform.LookAt(new Vector3(transform.position.x, spawnPos.y, transform.position.z));
+        building.position += crossProduct * buildingDistance;
 
-        spawnPos = transform.position;
-        spawnPos.x += (buildingBase.GetComponent<MeshRenderer>().bounds.size.x / 2 + GetComponent<MeshRenderer>().bounds.size.x / 2);
 
-        buildingTransform = Instantiate(buildingBase, spawnPos, transform.rotation).transform;
 
-        buildingTransform.LookAt(new Vector3(transform.position.x, spawnPos.y, transform.position.z));
+        //// Instantiate Building
+        //Transform buildingTransform = Instantiate(buildingBase, transform.position, transform.rotation).transform;
+        //buildingTransform.LookAt(new Vector3(transform.position.x, transform.position.y, transform.position.z));
+
+        //Vector3 crossProduct = Vector3.Cross(transform.forward, transform.up);
+        //float buildingDistance = buildingTransform.GetComponent<MeshRenderer>().bounds.size.x;
+
+        //buildingTransform.position += crossProduct * buildingDistance;
+        //buildingTransform.LookAt(new Vector3(transform.position.x, buildingTransform.position.y, transform.position.z));
+
+        //// Instantiate Building
+        //buildingTransform = Instantiate(buildingBase, transform.position, transform.rotation).transform;
+        //buildingTransform.LookAt(new Vector3(transform.position.x, transform.position.y, transform.position.z));
+
+        //crossProduct = Vector3.Cross(transform.forward, transform.up);
+        //buildingTransform.position += crossProduct * -buildingDistance;
+
+        //buildingTransform.LookAt(new Vector3(transform.position.x, buildingTransform.position.y, transform.position.z));
     }
 }
