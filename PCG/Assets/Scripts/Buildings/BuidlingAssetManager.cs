@@ -9,7 +9,6 @@ public class BuidlingAssetManager : MonoBehaviour
 
     public GameObject window, houseSign, chemistSign;
 
-
     // Start is called before the first frame update
     void Start()
     {

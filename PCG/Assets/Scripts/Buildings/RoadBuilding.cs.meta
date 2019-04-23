@@ -1,14 +1,11 @@
 fileFormatVersion: 2
-guid: 84967e2f262251f44aa6b06cbd0eab39
+guid: 01d0ec68f13611e48a8887b426d70b3f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - sign_post: {instanceID: 0}
-  - window: {fileID: 3173089354437204492, guid: e013aadf5966edc4eb7aed9faec76fa5,
+  - buildingBase: {fileID: 885631957785374770, guid: fd6b3ca2a9368ad47b650ff83b65705f,
       type: 3}
-  - houseSign: {instanceID: 0}
-  - chemistSign: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

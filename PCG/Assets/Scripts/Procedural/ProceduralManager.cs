@@ -34,45 +34,6 @@ public class ProceduralManager : MonoBehaviour
         //StartCoroutine(Build());
     }
 
-    public Transform BuildBuilding(Transform roadPieceTransform)
-    {
-        // Spawn Holder for Buildings
-        GameObject building = Instantiate(buidlingFolderPrefab, buildingHolder.transform) as GameObject;
-        building.name = "Building " + buildingNumber++;
-
-        // Index for random sections
-        int baseIndex = Random.Range(0, buildingBases.Count);
-        int roofIndex = Random.Range(0, buildingRoofs.Count);
-
-        // Sample pos for building
-        Vector3 pos = new Vector3(roadPieceTransform.position.x, 0, roadPieceTransform.position.z);
-        pos.y += Terrain.activeTerrain.SampleHeight(pos);
-
-        // Spawn Building Base
-        GameObject baseBuilding = Instantiate(buildingBases[baseIndex], pos, transform.rotation, building.transform);
-        baseBuilding.AddComponent<BoxCollider>();
-
-        /// Account for Y bounds for building Base
-        pos.y += buildingBases[baseIndex].GetComponent<MeshRenderer>().bounds.size.y;
-
-        // Spawn Building Mids
-        for (int j = 0; j < Random.Range(1, buildingsMaxMid + 1); j++)
-        {
-            transform.Rotate(Vector3.up, randomYRotation[Random.Range(0, randomYRotation.Length)]);
-
-            int midIndex = Random.Range(0, buildingMids.Count);
-
-            Instantiate(buildingMids[midIndex], pos, transform.rotation, building.transform).AddComponent<BoxCollider>();
-
-            pos.y += buildingMids[midIndex].GetComponent<MeshRenderer>().bounds.size.y;
-        }
-
-        // Spawn Building Roof
-        Instantiate(buildingRoofs[roofIndex], pos, transform.rotation, building.transform).AddComponent<BoxCollider>();
-
-        return building.transform;
-    }
-
     // Coroutine - Builds the specified number of buildings
     IEnumerator Build()
     {
