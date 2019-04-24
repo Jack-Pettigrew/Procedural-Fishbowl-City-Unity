@@ -1,13 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 // Procedural Manager Class - determines Procedural Content Generation
 public class ProceduralManager : MonoBehaviour
 {
     [Header("Parent"), Tooltip("The 'Folder' gameobject to store all 'Building Folders'.")]
     public Transform buildingParent;
-    
+
+    [Header("Road PCG")]
+    private NavMeshSurface surface;
+
     [Header("Buildings PCG"), Range(1, 50)]
     public int buildingsMaxMid = 1;
     public List<GameObject> buildingBases, buildingMids, buildingRoofs;
@@ -20,6 +24,8 @@ public class ProceduralManager : MonoBehaviour
     public Terrain cityTerrain;
     public float totalTerrainHeight, totalTerrainLength;
     public List<Terrain> terrainList;
+
+    public  
 
     // Set Handles
     void Start()
@@ -36,6 +42,14 @@ public class ProceduralManager : MonoBehaviour
                 cityTerrain = terrainList[i];
         }
 
+    }
+
+    public void BakeRoadNavMesh()
+    {
+        surface = GetComponent<NavMeshSurface>();
+
+        surface.BuildNavMesh();
+        
     }
 
 }

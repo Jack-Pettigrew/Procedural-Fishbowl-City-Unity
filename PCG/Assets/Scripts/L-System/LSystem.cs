@@ -18,6 +18,8 @@ public class LSystem : MonoBehaviour
     private Stack<SavedTransforms> savedTransforms = new Stack<SavedTransforms>();    // Stored Transforms
     private Dictionary<char, string> rules = new Dictionary<char, string>();          // Axiom Rule set
 
+    private ProceduralManager pm;
+
     private void Start()
     {
         // Set current Sentence
@@ -30,6 +32,9 @@ public class LSystem : MonoBehaviour
         // Generate Roads
         Generate();
         Build();
+
+        pm = FindObjectOfType<ProceduralManager>();
+        pm.BakeRoadNavMesh();
     }
 
     // Generates L-System

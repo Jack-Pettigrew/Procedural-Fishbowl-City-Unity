@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5606879629081419989}
   - component: {fileID: 6305855138517688228}
   - component: {fileID: 4221964663993350}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Road_Intersection
   m_TagString: Road
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3806058037638663916}
-  m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 53.16215, y: 2.18, z: 211.13055}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
