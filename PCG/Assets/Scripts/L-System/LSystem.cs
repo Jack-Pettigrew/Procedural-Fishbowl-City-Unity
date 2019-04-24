@@ -5,11 +5,12 @@ using UnityEngine;
 public class LSystem : MonoBehaviour
 {
     [Header("L-System Properties")]
+    public Transform roadParent;
     public bool extendedTerrainRoad = false;            // Toggles Extended Road
     public int generations = 1;                         // Number of L-System generations
     public string axiom = "F";                          // Initial char to start with
     public string ruleOne = "FFI";
-    public string ruleTwo = "[+FFI+FFI--FFI][-FFI-FFI++FFI]";
+    public string ruleTwo = "[+FFI][-FFI]";
     string currentSentence;                             // Current sentence
     public Terrain terrain;                             // Terrain to check
 
@@ -132,7 +133,7 @@ public class LSystem : MonoBehaviour
             // If road exsists...
             if (road)
             {
-                road = Instantiate(road, this.transform.position, this.transform.rotation);
+                road = Instantiate(road, this.transform.position, this.transform.rotation, roadParent);
 
                 // Destroy road piece if it's outside Terrain
                 if (!IsWithinTerrain(road) && !extendedTerrainRoad)

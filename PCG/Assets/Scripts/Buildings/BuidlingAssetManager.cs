@@ -21,18 +21,11 @@ public class BuidlingAssetManager : MonoBehaviour
             if (item.tag != "Window")
                 continue;
 
-            isSpawned = Random.Range(0, 2);
+            isSpawned = Random.Range(0, 10);
 
-            switch(isSpawned)
-            {
-                case 0:
-                    break;
+            if(isSpawned == 1)
+                Instantiate(window, item.position, item.rotation).transform.SetParent(item);
 
-                case 1:
-                    Instantiate(window, item.position, item.rotation).transform.SetParent(item);
-
-                    break;
-            }
         }
 
         if (sign_post)
