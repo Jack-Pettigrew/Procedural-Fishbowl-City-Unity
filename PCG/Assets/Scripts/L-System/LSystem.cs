@@ -22,6 +22,11 @@ public class LSystem : MonoBehaviour
 
     private void Start()
     {
+        pm = FindObjectOfType<ProceduralManager>();
+
+        if (pm.disableAllPCG)
+            return;
+
         // Set current Sentence
         currentSentence = axiom;
 
@@ -33,7 +38,6 @@ public class LSystem : MonoBehaviour
         Generate();
         Build();
 
-        pm = FindObjectOfType<ProceduralManager>();
         pm.BakeRoadNavMesh();
     }
 

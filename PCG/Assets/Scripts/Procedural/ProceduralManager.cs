@@ -8,6 +8,7 @@ public class ProceduralManager : MonoBehaviour
 {
     [Header("Parents"), Tooltip("The 'Folder' gameobject to store all 'Building Folders'.")]
     public Transform buildingParent;
+    public bool disableAllPCG;
 
     [Header("Road PCG")]
     private NavMeshSurface surface;
