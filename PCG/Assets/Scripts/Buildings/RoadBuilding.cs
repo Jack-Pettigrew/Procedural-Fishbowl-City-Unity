@@ -31,7 +31,6 @@ public class RoadBuilding : MonoBehaviour
         buildingTransform.position += crossProduct * buildingDistance;
         buildingTransform.LookAt(new Vector3(transform.position.x, buildingTransform.position.y, transform.position.z));
 
-
         // ...Again for second building
         buildingBase = GetRandomBase();
         buildingTransform = Instantiate(buildingBase, transform.position, transform.rotation, buildingParent).transform;
@@ -39,8 +38,8 @@ public class RoadBuilding : MonoBehaviour
 
         crossProduct = Vector3.Cross(transform.forward, transform.up);
         buildingDistance = buildingBase.GetComponent<MeshRenderer>().bounds.size.x;
-        buildingTransform.position += crossProduct * -buildingDistance;
 
+        buildingTransform.position += crossProduct * -buildingDistance;
         buildingTransform.LookAt(new Vector3(transform.position.x, buildingTransform.position.y, transform.position.z));
     }
 

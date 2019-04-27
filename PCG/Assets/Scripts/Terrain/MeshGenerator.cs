@@ -20,6 +20,12 @@ public class MeshGenerator : MonoBehaviour
     Vector3[] vertices;     // Mesh vertices
     int[] triangles;        // Mesh triangles
 
+    private void Awake()
+    {
+        perlinOffset.x = Random.Range(0.0f, 1.0f);
+        perlinOffset.y = Random.Range(0.0f, 1.0f);
+    }
+
     private void Start()
     {
         mesh = new Mesh();

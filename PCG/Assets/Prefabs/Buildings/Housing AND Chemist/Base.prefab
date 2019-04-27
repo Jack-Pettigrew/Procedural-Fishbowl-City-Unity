@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 4134373347856940522}
   - component: {fileID: 1021416718307771541}
   - component: {fileID: 3063227213223643238}
+  - component: {fileID: 6554427704392719095}
   m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
@@ -134,7 +135,7 @@ MonoBehaviour:
   - {fileID: 1807321111718950063, guid: 78ec2f6249f93bd4fb1e3b9d2c6de89c, type: 3}
   - {fileID: 455124454064992781, guid: ba6313b95604034418a8734d5725a663, type: 3}
   buildingRoofs:
-  - {fileID: 100000, guid: 4d68433682c2239499997956acf1e78c, type: 3}
+  - {fileID: 3739008853725481456, guid: 521dab3eb471c6845a7ab041a3530f3c, type: 3}
 --- !u!114 &3063227213223643238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,6 +154,19 @@ MonoBehaviour:
   chemistSign: {fileID: 4676064080649392160, guid: d1cb08d026dd0ae46a2ba835d34711a1,
     type: 3}
   sign_post: {fileID: 2538400552598956790}
+--- !u!65 &6554427704392719095
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885631957785374770}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04037386, y: 0.011657011, z: 0.04037386}
+  m_Center: {x: 0, y: 0.00582844, z: 0}
 --- !u!1 &1007155636539777623
 GameObject:
   m_ObjectHideFlags: 0

@@ -72,6 +72,7 @@ GameObject:
   - component: {fileID: 4211648949310531198}
   - component: {fileID: 1940009473491026647}
   - component: {fileID: 4958056688720494203}
+  - component: {fileID: 4272935458565091802}
   m_Layer: 0
   m_Name: Mid_2
   m_TagString: Untagged
@@ -162,6 +163,19 @@ MonoBehaviour:
   houseSign: {fileID: 0}
   chemistSign: {fileID: 0}
   sign_post: {fileID: 0}
+--- !u!65 &4272935458565091802
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455124454064992781}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04035575, y: 0.008215435, z: 0.04035575}
+  m_Center: {x: 0.0000017574057, y: 0.004107685, z: -0.000014086254}
 --- !u!1 &5132761328969263273
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4317170041220909421}
   - component: {fileID: 3047062877503526945}
   - component: {fileID: 1755709231240588113}
+  - component: {fileID: 6334078069163671576}
   m_Layer: 0
   m_Name: Shop_Base
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3782303177070818479}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.94, y: 1.12, z: 3}
   m_Children:
@@ -94,10 +95,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingMids:
-  - {fileID: 100000, guid: 1d951e27cb79b544c8a3bfa5092cf53f, type: 3}
-  - {fileID: 100000, guid: 5bbbbc89d67eaf04dafc3512a65d0fbf, type: 3}
+  - {fileID: 6746561172449076210, guid: a28746bc634eb4145b432d5a7213af32, type: 3}
+  - {fileID: 3253861483409435291, guid: 7c2dceb833f10b84799ec92fef95dff2, type: 3}
   buildingRoofs:
-  - {fileID: 100000, guid: cf68c386a6320474cba0aef038a2cca7, type: 3}
+  - {fileID: 2147218438956858771, guid: 360df7696bdd88a428df6706aec80824, type: 3}
+--- !u!65 &6334078069163671576
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3782303177070818479}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.0000001, z: 1}
+  m_Center: {x: 0.00046628714, y: 0.4999898, z: -0.0002284646}
 --- !u!1001 &281966909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -105,18 +119,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1245130}
     m_Modifications:
-    - target: {fileID: 100002, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
-      propertyPath: m_Name
-      value: Window_Shop
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.299
@@ -173,6 +175,18 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.008928568
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
+      propertyPath: m_Name
+      value: Window_Shop
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -196,18 +210,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1245130}
     m_Modifications:
-    - target: {fileID: 100002, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
-      propertyPath: m_Name
-      value: Window_Shop (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.292
@@ -263,6 +265,18 @@ PrefabInstance:
     - target: {fileID: 400002, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.008928568
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
+      propertyPath: m_Name
+      value: Window_Shop (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
       propertyPath: m_Materials.Array.data[0]
