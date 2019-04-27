@@ -7,12 +7,14 @@ using UnityEngine;
 [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
 public class MeshGenerator : MonoBehaviour
 {
-    [Header("Mesh dimension")]
+    [Header("Mesh Dimensions")]
     public int width;
     public int length;
-    [Header("Mesh Details")]
+    [Header("Mesh Details"), Tooltip("Controls size of each quad (Useful for large meshes with less vertices)")]
+    public float meshScaling = 1.0f;
     public float perlinStrength;
     public Vector2 perlinOffset;
+    public bool isWater = false;
 
     Mesh mesh;              // New Mesh
     Vector3[] vertices;     // Mesh vertices
@@ -30,7 +32,8 @@ public class MeshGenerator : MonoBehaviour
 
     private void FixedUpdate()
     {
-        perlinOffset.x += 0.01f;
+        if(isWater)
+            perlinOffset.x += 0.01f;
 
         GenerateMesh();
         ApplyMesh();
@@ -51,9 +54,16 @@ public class MeshGenerator : MonoBehaviour
         {
             for (int x = 0; x <= width; x++)
             {
-                float perlin = Mathf.PerlinNoise(x + perlinOffset.x, z + perlinOffset.y) * perlinStrength;
 
-                vertices[index] = new Vector3(x, perlin, z);
+                float perlin = Mathf.PerlinNoise(x + perlinOffset.x, z + perlinOffset.y) * perlinStrength;
+                perlin += (perlin * 2) - 1;
+
+                if(!isWater)
+                    vertices[index] = new Vector3(x * meshScaling, z * perlin, z * meshScaling);
+                else
+                    vertices[index] = new Vector3(x * meshScaling, perlin, z * meshScaling);
+
+
                 index++;
                 xPos++;
             }
@@ -108,5 +118,7 @@ public class MeshGenerator : MonoBehaviour
             width = 1;
         if (length < 1)
             length = 1;
+        if (meshScaling < 1)
+            meshScaling = 1.0f;
     }
 }
