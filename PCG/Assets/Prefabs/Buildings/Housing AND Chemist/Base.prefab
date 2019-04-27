@@ -130,6 +130,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e1b29fedbcee7b4da24cda75c18e0cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buildingMids:
+  - {fileID: 1807321111718950063, guid: 78ec2f6249f93bd4fb1e3b9d2c6de89c, type: 3}
+  - {fileID: 455124454064992781, guid: ba6313b95604034418a8734d5725a663, type: 3}
+  buildingRoofs:
+  - {fileID: 100000, guid: 4d68433682c2239499997956acf1e78c, type: 3}
 --- !u!114 &3063227213223643238
 MonoBehaviour:
   m_ObjectHideFlags: 0

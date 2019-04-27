@@ -5,7 +5,7 @@ using UnityEngine;
 public class RoadBuilding : MonoBehaviour
 {
     // Building Objects
-    public GameObject buildingBase;
+    public GameObject[] buildingBase;
     private ProceduralManager pm;
     private Transform buildingParent;
 
@@ -17,6 +17,7 @@ public class RoadBuilding : MonoBehaviour
 
     void Start()
     {
+        GameObject buildingBase = GetRandomBase();
 
         // Instantiate Building
         Transform buildingTransform = Instantiate(buildingBase, transform.position, transform.rotation, buildingParent).transform;
@@ -24,7 +25,7 @@ public class RoadBuilding : MonoBehaviour
 
         // Calculate movement axis according to rotation
         Vector3 crossProduct = Vector3.Cross(transform.forward, transform.up);
-        float buildingDistance = buildingTransform.GetComponent<MeshRenderer>().bounds.size.x;
+        float buildingDistance = buildingBase.GetComponent<MeshRenderer>().bounds.size.x;
 
         // Move building according to size values
         buildingTransform.position += crossProduct * buildingDistance;
@@ -32,12 +33,22 @@ public class RoadBuilding : MonoBehaviour
 
 
         // ...Again for second building
+        buildingBase = GetRandomBase();
         buildingTransform = Instantiate(buildingBase, transform.position, transform.rotation, buildingParent).transform;
         buildingTransform.LookAt(new Vector3(transform.position.x, transform.position.y, transform.position.z));
 
         crossProduct = Vector3.Cross(transform.forward, transform.up);
+        buildingDistance = buildingBase.GetComponent<MeshRenderer>().bounds.size.x;
         buildingTransform.position += crossProduct * -buildingDistance;
 
         buildingTransform.LookAt(new Vector3(transform.position.x, buildingTransform.position.y, transform.position.z));
+    }
+
+    GameObject GetRandomBase()
+    {
+        int maxBases = pm.buidlingBases.Length;
+        GameObject buildingBase = pm.buidlingBases[Random.Range(0, maxBases)];
+
+        return buildingBase;
     }
 }

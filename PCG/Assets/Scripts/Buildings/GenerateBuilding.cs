@@ -6,6 +6,9 @@ public class GenerateBuilding : MonoBehaviour
 {
     private ProceduralManager pm;
 
+    [SerializeField]
+    private GameObject[] buildingMids, buildingRoofs;
+
     private void Awake()
     {
         pm = FindObjectOfType<ProceduralManager>();
@@ -21,23 +24,23 @@ public class GenerateBuilding : MonoBehaviour
     {
         Vector3 spawnPosition = transform.position;
 
-        int baseIndex = Random.Range(0, pm.buildingBases.Count);
-        int roofIndex = Random.Range(0, pm.buildingRoofs.Count);
+        float height = GetComponentInParent<MeshRenderer>().bounds.size.y;
+        int roofIndex = Random.Range(0, buildingRoofs.Length);
 
-        spawnPosition.y += pm.buildingBases[baseIndex].GetComponent<Renderer>().bounds.size.y;
+        spawnPosition.y += height;
 
         for (int i = 0; i < Random.Range(1, pm.buildingsMaxMid); i++)
         {
-            int midIndex = Random.Range(0, pm.buildingMids.Count);
+            int midIndex = Random.Range(0, buildingMids.Length);
 
-            Transform currentMid = Instantiate(pm.buildingMids[midIndex], spawnPosition, transform.rotation).transform;
+            Transform currentMid = Instantiate(buildingMids[midIndex], spawnPosition, transform.rotation).transform;
             currentMid.SetParent(this.transform);
 
             currentMid.Rotate(Vector3.up, pm.randomYRotation[Random.Range(0, pm.randomYRotation.Length)]);
 
-            spawnPosition.y += pm.buildingMids[midIndex].GetComponent<Renderer>().bounds.size.y;
+            spawnPosition.y += buildingMids[midIndex].GetComponent<Renderer>().bounds.size.y;
         }
 
-        Instantiate(pm.buildingRoofs[roofIndex], spawnPosition, transform.rotation).transform.SetParent(this.transform);
+        Instantiate(buildingRoofs[roofIndex], spawnPosition, transform.rotation).transform.SetParent(this.transform);
     }
 }

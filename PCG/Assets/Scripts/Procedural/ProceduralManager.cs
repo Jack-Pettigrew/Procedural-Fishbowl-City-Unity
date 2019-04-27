@@ -15,7 +15,7 @@ public class ProceduralManager : MonoBehaviour
 
     [Header("Buildings PCG"), Range(1, 50)]
     public int buildingsMaxMid = 1;
-    public List<GameObject> buildingBases, buildingMids, buildingRoofs;
+    public GameObject[] buidlingBases;
 
     [Header("NPCs")]
     public List<GameObject> npcList;
