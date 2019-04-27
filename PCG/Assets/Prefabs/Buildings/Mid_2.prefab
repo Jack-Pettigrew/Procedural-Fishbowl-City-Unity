@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84967e2f262251f44aa6b06cbd0eab39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  window: {fileID: 3173089354437204492, guid: e013aadf5966edc4eb7aed9faec76fa5, type: 3}
+  window: {fileID: 4947391249126336915, guid: 71f8ba2def79a514fafb5fac6535d366, type: 3}
   houseSign: {fileID: 0}
   chemistSign: {fileID: 0}
   sign_post: {fileID: 0}

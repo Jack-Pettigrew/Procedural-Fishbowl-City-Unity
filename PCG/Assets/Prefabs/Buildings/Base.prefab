@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84967e2f262251f44aa6b06cbd0eab39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  window: {fileID: 3173089354437204492, guid: e013aadf5966edc4eb7aed9faec76fa5, type: 3}
+  window: {fileID: 4947391249126336915, guid: 71f8ba2def79a514fafb5fac6535d366, type: 3}
   houseSign: {fileID: 1931707505288152420, guid: 7447a67d40c51524db8ff36ae41c841a,
     type: 3}
   chemistSign: {fileID: 4676064080649392160, guid: d1cb08d026dd0ae46a2ba835d34711a1,
