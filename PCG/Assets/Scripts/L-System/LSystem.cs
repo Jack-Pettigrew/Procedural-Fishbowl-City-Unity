@@ -65,7 +65,7 @@ public class LSystem : MonoBehaviour
             // Apply
             currentSentence = nextSentence;
             
-            Debug.Log(nextSentence);
+            //Debug.Log(nextSentence);
         }
 
     }

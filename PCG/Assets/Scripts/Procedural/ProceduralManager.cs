@@ -9,28 +9,34 @@ public class ProceduralManager : MonoBehaviour
     [Header("Master PCG")]
     public bool disableAllPCG;
 
-    [Header("Parents"), Tooltip("The 'Folder' gameobject to store all 'Building Folders'.")]
+    [Header("Parenting"), Tooltip("The 'Folder' gameobject to store all 'Building Folders'.")]
     public Transform buildingParent;
     public Transform npcParent;
 
-    [Header("Road PCG")]
+    [Header("Roads")]
     private NavMeshSurface surface;
 
-    [Header("Buildings PCG"), Range(1, 50)]
+    [Header("Buildings"), Range(1, 50)]
     public int buildingsMaxMid = 1;
     public GameObject[] buidlingBases;
+    [HideInInspector]
+    public float[] randomYRotation = { 0, 90, 180, 270 };
+    private static int buildingNumber = 0;
 
     [Header("NPCs")]
     public int npcsCount = 0;
     public int maxNpcs = 100;
     public List<GameObject> npcList;
+    [HideInInspector]
     public List<Transform> spawnPoints;
 
-    [HideInInspector]
-    public float[] randomYRotation = { 0, 90, 180, 270 };
-    private static int buildingNumber = 0;
+    [Header("Skyships")]
+    public int maxShipNumber = 10;
+    public float maxShipSpacing = 10.0f;
+    [Range(100, 500)]
+    public float maxLoopDist = 500.0f;
 
-    [Header("Terrain PCG")]
+    [Header("Terrain")]
     public float terrainWidth;
     public float terrainLength;
 
