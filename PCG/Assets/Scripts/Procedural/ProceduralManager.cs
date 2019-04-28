@@ -19,6 +19,11 @@ public class ProceduralManager : MonoBehaviour
     [Header("Buildings"), Range(1, 50)]
     public int buildingsMaxMid = 1;
     public GameObject[] buidlingBases;
+    public int maxNumberBanks = 5;
+    public int maxNumberLibaries = 2;
+    [HideInInspector]
+    public int currentNumberBanks = 0, currentNumberLibraries = 0;
+
     [HideInInspector]
     public float[] randomYRotation = { 0, 90, 180, 270 };
     private static int buildingNumber = 0;
@@ -33,7 +38,7 @@ public class ProceduralManager : MonoBehaviour
     [Header("Skyships")]
     public int maxShipNumber = 10;
     public float maxShipSpacing = 10.0f;
-    [Range(100, 500)]
+    [Range(250, 1000)]
     public float maxLoopDist = 500.0f;
 
     [Header("Terrain")]

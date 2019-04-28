@@ -5,7 +5,6 @@ using UnityEngine;
 public class RoadBuilding : MonoBehaviour
 {
     // Building Objects
-    public GameObject[] buildingBase;
     private ProceduralManager pm;
     private Transform buildingParent;
 
@@ -30,7 +29,9 @@ public class RoadBuilding : MonoBehaviour
         // Move building according to size values
         buildingTransform.position += crossProduct * buildingDistance;
         buildingTransform.LookAt(new Vector3(transform.position.x, buildingTransform.position.y, transform.position.z));
-        pm.spawnPoints.Add(buildingTransform.GetComponentInChildren<NpcSpawner>().transform);
+
+        if (buildingTransform.childCount > 2)
+            pm.spawnPoints.Add(buildingTransform.GetComponentInChildren<NpcSpawner>().transform);
 
         // ...Again for second building
         buildingBase = GetRandomBase();
@@ -42,7 +43,9 @@ public class RoadBuilding : MonoBehaviour
 
         buildingTransform.position += crossProduct * -buildingDistance;
         buildingTransform.LookAt(new Vector3(transform.position.x, buildingTransform.position.y, transform.position.z));
-        pm.spawnPoints.Add(buildingTransform.GetComponentInChildren<NpcSpawner>().transform);
+
+        if (buildingTransform.childCount > 2)
+            pm.spawnPoints.Add(buildingTransform.GetComponentInChildren<NpcSpawner>().transform);
 
     }
 
@@ -50,6 +53,37 @@ public class RoadBuilding : MonoBehaviour
     {
         int maxBases = pm.buidlingBases.Length;
         GameObject buildingBase = pm.buidlingBases[Random.Range(0, maxBases)];
+
+        switch(buildingBase.name)
+        {
+            case "Bank":
+                if (Random.Range(0, 19) == 0 && pm.currentNumberBanks < pm.maxNumberBanks)
+                {
+                    pm.currentNumberBanks++;
+                }
+                else
+                {
+                    while (buildingBase.name == "Bank" || buildingBase.name == "Library")
+                    {
+                        buildingBase = pm.buidlingBases[Random.Range(0, maxBases)];
+                    }
+                }
+                break;
+
+            case "Library":
+                if (Random.Range(0, 19) == 0 && pm.currentNumberLibraries < pm.maxNumberLibaries)
+                {
+                    pm.currentNumberLibraries++;
+                }
+                else
+                {
+                    while (buildingBase.name == "Library" || buildingBase.name == "Bank")
+                    {
+                        buildingBase = pm.buidlingBases[Random.Range(0, maxBases)];
+                    }
+                }
+                break;
+        }
 
         return buildingBase;
     }

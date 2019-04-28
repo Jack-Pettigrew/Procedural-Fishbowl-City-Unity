@@ -1010,13 +1010,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1506030394}
-  m_LocalRotation: {x: -0, y: 0.8660251, z: -0, w: 0.5000006}
+  m_LocalRotation: {x: -0, y: 0.90062433, z: -0, w: 0.4345986}
   m_LocalPosition: {x: -50, y: 85, z: 600}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 120.00001, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 128.48001, z: 0}
 --- !u!1 &1629252651
 GameObject:
   m_ObjectHideFlags: 0
@@ -1290,6 +1290,12 @@ MonoBehaviour:
   buidlingBases:
   - {fileID: 885631957785374770, guid: fd6b3ca2a9368ad47b650ff83b65705f, type: 3}
   - {fileID: 3782303177070818479, guid: a8c18c297988c6440983edb8a3b4d4a4, type: 3}
+  - {fileID: 6374540101646958667, guid: 842c0188aafe27441b4a70018f5156f5, type: 3}
+  - {fileID: 6906636386585586098, guid: d91955c21f8d9804e94f1b3addd8a71c, type: 3}
+  maxNumberBanks: 5
+  maxNumberLibaries: 2
+  currentNumberBanks: 0
+  currentNumberLibraries: 0
   randomYRotation:
   - 0
   - 90
@@ -1300,9 +1306,9 @@ MonoBehaviour:
   npcList:
   - {fileID: 1984196013, guid: 233747708145ebb4c968edf247210640, type: 3}
   spawnPoints: []
-  maxShipNumber: 25
+  maxShipNumber: 45
   maxShipSpacing: 30
-  maxLoopDist: 500
+  maxLoopDist: 650
   terrainWidth: 0
   terrainLength: 0
 --- !u!114 &2058832448
