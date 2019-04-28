@@ -1,14 +1,24 @@
 fileFormatVersion: 2
-guid: f054ec837e2b5464fbd25c047b8cb7a4
+guid: 6fe8837ab0dcd1e48ad397adfdfb4960
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
+    100000: Eye_Left
+    100002: Eye_Right
+    100004: //RootNode
+    400000: Eye_Left
+    400002: Eye_Right
+    400004: //RootNode
     2100000: No Name
-    2300000: //RootNode
-    3300000: //RootNode
+    2300000: Eye_Left
+    2300002: Eye_Right
+    2300004: //RootNode
+    3300000: Eye_Left
+    3300002: Eye_Right
+    3300004: //RootNode
     4300000: Body
+    4300002: Eye_Left
+    4300004: Eye_Right
   externalObjects: {}
   materials:
     importMaterials: 1

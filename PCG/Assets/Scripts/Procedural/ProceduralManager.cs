@@ -6,9 +6,12 @@ using UnityEngine.AI;
 // Procedural Manager Class - determines Procedural Content Generation
 public class ProceduralManager : MonoBehaviour
 {
+    [Header("Master PCG")]
+    public bool disableAllPCG;
+
     [Header("Parents"), Tooltip("The 'Folder' gameobject to store all 'Building Folders'.")]
     public Transform buildingParent;
-    public bool disableAllPCG;
+    public Transform npcParent;
 
     [Header("Road PCG")]
     private NavMeshSurface surface;
@@ -18,7 +21,10 @@ public class ProceduralManager : MonoBehaviour
     public GameObject[] buidlingBases;
 
     [Header("NPCs")]
+    public int npcsCount = 0;
+    public int maxNpcs = 100;
     public List<GameObject> npcList;
+    public List<Transform> spawnPoints;
 
     [HideInInspector]
     public float[] randomYRotation = { 0, 90, 180, 270 };
@@ -28,7 +34,6 @@ public class ProceduralManager : MonoBehaviour
     public float terrainWidth;
     public float terrainLength;
 
-
     public void BakeRoadNavMesh()
     {
         surface = GetComponent<NavMeshSurface>();
@@ -36,5 +41,4 @@ public class ProceduralManager : MonoBehaviour
         surface.BuildNavMesh();
         
     }
-
 }
