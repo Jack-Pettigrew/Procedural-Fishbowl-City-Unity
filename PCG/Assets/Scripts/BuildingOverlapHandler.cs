@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class BuildingOverlapHandler : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider col)
+    private void OnTriggerStay(Collider other)
     {
-        if (col.name == "Bank" || col.name == "Library")
-        {
-            Destroy(col.gameObject);
-        }
+        
     }
 }

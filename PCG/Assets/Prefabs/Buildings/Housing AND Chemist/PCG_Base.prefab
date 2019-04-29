@@ -46,8 +46,8 @@ GameObject:
   - component: {fileID: 6554427704392719095}
   - component: {fileID: 110649379}
   - component: {fileID: 4494584956360339346}
-  m_Layer: 9
-  m_Name: Base
+  m_Layer: 0
+  m_Name: PCG_Base
   m_TagString: City
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
