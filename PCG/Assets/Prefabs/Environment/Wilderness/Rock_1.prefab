@@ -16,10 +16,10 @@ GameObject:
   - component: {fileID: 2004725892}
   m_Layer: 0
   m_Name: Rock_1
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &825951840061212492
 Transform:
@@ -60,8 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c5add947cd1304247b5b9c0415ea7a94, type: 3}
-  - {fileID: 2100000, guid: 27f7b9f120ad03e468993bd792b34980, type: 2}
+  - {fileID: 2100000, guid: d8cbf022b92acd94296bff02170522e0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

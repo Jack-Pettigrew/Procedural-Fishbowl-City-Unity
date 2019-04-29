@@ -9,7 +9,7 @@ public class NPCBehaviour : MonoBehaviour
     public ProceduralManager pm;
     private NavMeshAgent ai;
 
-    private Vector3 destination;
+    private Transform destination;
 
     public float waitTimer = 0.0f;
 
@@ -24,7 +24,7 @@ public class NPCBehaviour : MonoBehaviour
 
     void Update()
     {
-        if (ai.remainingDistance <= 5.0f)
+        if (ai.remainingDistance <= 3.0f)
             waitTimer -= Time.deltaTime;
 
         if (waitTimer <= 0.0f)
@@ -35,8 +35,13 @@ public class NPCBehaviour : MonoBehaviour
     {
         waitTimer = Random.Range(3.0f, 5.0f);
 
-        destination = pm.spawnPoints[Random.Range(0, pm.spawnPoints.Count)].position;
+        destination = null;
 
-        ai.SetDestination(destination);
+        while (!destination)
+        {
+            destination = pm.spawnPoints[Random.Range(0, pm.spawnPoints.Count)];
+        }
+
+        ai.SetDestination(destination.position);
     }
 }

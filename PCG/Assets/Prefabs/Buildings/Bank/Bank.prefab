@@ -88,8 +88,10 @@ GameObject:
   - component: {fileID: 7546594326352307825}
   - component: {fileID: 720423930316478675}
   - component: {fileID: 6461927729857348322}
-  - component: {fileID: 7224916315686969735}
-  - component: {fileID: 143574193963143568}
+  - component: {fileID: 6374540101646958670}
+  - component: {fileID: 6374540101646958669}
+  - component: {fileID: 6374540101646958668}
+  - component: {fileID: 1359166013}
   m_Layer: 0
   m_Name: Bank
   m_TagString: City
@@ -138,7 +140,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ad2676febaeda31468b40349caa0c607, type: 3}
+  - {fileID: 2100000, guid: 4d6e9bd7d6c6b3745b4bd0e868c2359e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -158,7 +160,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7224916315686969735
+--- !u!65 &6374540101646958670
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,12 +168,28 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6374540101646958667}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2, y: 3.666666, z: 2}
   m_Center: {x: 0.003137827, y: 1.83335, z: -0.003137827}
---- !u!114 &143574193963143568
+--- !u!54 &6374540101646958669
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6374540101646958667}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &6374540101646958668
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -183,6 +201,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1146cb22be6c05b49834481df167e619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stay: 0
+--- !u!65 &1359166013
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6374540101646958667}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 3.666666, z: 2}
+  m_Center: {x: 0.003137827, y: 1.83335, z: -0.003137827}
 --- !u!1 &8055916836176547286
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,7 +21,13 @@ public class NpcSpawner : MonoBehaviour
 
     private void SpawnNPC()
     {
-        Transform spawnPoint = pm.spawnPoints[Random.Range(0, pm.spawnPoints.Count)];
+        Transform spawnPoint = null;
+
+        while(!spawnPoint)
+        {
+            spawnPoint = pm.spawnPoints[Random.Range(0, pm.spawnPoints.Count)];
+        }
+
         GameObject npc = pm.npcList[Random.Range(0, pm.npcList.Count)];
 
         Instantiate(npc, spawnPoint.position, Quaternion.identity, pm.npcParent).GetComponent<NPCBehaviour>().pm = pm;

@@ -9,6 +9,7 @@ TagManager:
   - Sign_Post
   - City_Terrain
   - City
+  - Environment
   layers:
   - Default
   - TransparentFX

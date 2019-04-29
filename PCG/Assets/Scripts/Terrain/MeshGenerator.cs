@@ -10,11 +10,13 @@ public class MeshGenerator : MonoBehaviour
     [Header("Mesh Dimensions")]
     public int width;
     public int length;
+
     [Header("Mesh Details"), Tooltip("Controls size of each quad (Useful for large meshes with less vertices)")]
+    public bool isWater = false;
+    public bool gradualTerrainRise = false;
     public float meshScaling = 1.0f;
     public float perlinStrength;
     public Vector2 perlinOffset;
-    public bool isWater = false;
 
     Mesh mesh;              // New Mesh
     Vector3[] vertices;     // Mesh vertices
@@ -64,7 +66,7 @@ public class MeshGenerator : MonoBehaviour
                 float perlin = Mathf.PerlinNoise(x + perlinOffset.x, z + perlinOffset.y) * perlinStrength;
                 perlin += (perlin * 2) - 1;
 
-                if(!isWater)
+                if(gradualTerrainRise)
                     vertices[index] = new Vector3(x * meshScaling, z * perlin, z * meshScaling);
                 else
                     vertices[index] = new Vector3(x * meshScaling, perlin, z * meshScaling);

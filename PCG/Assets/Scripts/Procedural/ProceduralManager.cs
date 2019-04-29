@@ -36,7 +36,7 @@ public class ProceduralManager : MonoBehaviour
     [HideInInspector]
     public List<Transform> spawnPoints;
 
-    [Header("Environment"), Range(50, 1000)]
+    [Header("Environment"), Range(100, 2000)]
     public int numberOfEnvironment = 5;
     public List<GameObject> environmentList;
 
