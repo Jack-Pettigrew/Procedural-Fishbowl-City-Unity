@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 6334078069163671576}
   m_Layer: 9
   m_Name: Shop_Base
-  m_TagString: Untagged
+  m_TagString: City
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -163,18 +163,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1245130}
     m_Modifications:
-    - target: {fileID: 100002, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
-      propertyPath: m_Name
-      value: Window_Shop
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.299
@@ -231,6 +219,18 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.008928568
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
+      propertyPath: m_Name
+      value: Window_Shop
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 2300002, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -254,18 +254,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1245130}
     m_Modifications:
-    - target: {fileID: 100002, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
-      propertyPath: m_Name
-      value: Window_Shop (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.292
@@ -321,6 +309,18 @@ PrefabInstance:
     - target: {fileID: 400002, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.008928568
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
+      propertyPath: m_Name
+      value: Window_Shop (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2300002, guid: ce66fb2e8a536624a91cf67c909234c8, type: 3}
       propertyPath: m_Materials.Array.data[0]

@@ -12,6 +12,7 @@ public class ProceduralManager : MonoBehaviour
     [Header("Parenting"), Tooltip("The 'Folder' gameobject to store all 'Building Folders'.")]
     public Transform buildingParent;
     public Transform npcParent;
+    public Transform environmentParent;
 
     [Header("Roads")]
     private NavMeshSurface surface;
@@ -35,21 +36,20 @@ public class ProceduralManager : MonoBehaviour
     [HideInInspector]
     public List<Transform> spawnPoints;
 
+    [Header("Environment"), Range(50, 1000)]
+    public int numberOfEnvironment = 5;
+    public List<GameObject> environmentList;
+
     [Header("Skyships")]
     public int maxShipNumber = 10;
     public float maxShipSpacing = 10.0f;
     [Range(250, 1000)]
     public float maxLoopDist = 500.0f;
 
-    [Header("Terrain")]
-    public float terrainWidth;
-    public float terrainLength;
-
     public void BakeRoadNavMesh()
     {
         surface = GetComponent<NavMeshSurface>();
 
         surface.BuildNavMesh();
-        
     }
 }

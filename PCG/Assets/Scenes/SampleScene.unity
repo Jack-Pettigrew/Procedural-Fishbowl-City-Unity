@@ -112,6 +112,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &146106267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 146106268}
+  m_Layer: 0
+  m_Name: Wilderness
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &146106268
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146106267}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 684453033}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &153153217
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,6 +508,49 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 327558785}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &473712288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 473712289}
+  - component: {fileID: 473712290}
+  m_Layer: 0
+  m_Name: Environment Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &473712289
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473712288}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &473712290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473712288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc263d779339f9344aac1111401ab5b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &684453032
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,6 +582,7 @@ Transform:
   - {fileID: 1991679087}
   - {fileID: 153153218}
   - {fileID: 1331929591}
+  - {fileID: 146106268}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -962,7 +1036,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 45.000004, z: 0}
 --- !u!1 &1506030394
 GameObject:
@@ -1015,7 +1089,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 128.48001, z: 0}
 --- !u!1 &1629252651
 GameObject:
@@ -1286,12 +1360,13 @@ MonoBehaviour:
   disableAllPCG: 0
   buildingParent: {fileID: 153153218}
   npcParent: {fileID: 1331929591}
+  environmentParent: {fileID: 146106268}
   buildingsMaxMid: 10
   buidlingBases:
   - {fileID: 885631957785374770, guid: fd6b3ca2a9368ad47b650ff83b65705f, type: 3}
   - {fileID: 3782303177070818479, guid: a8c18c297988c6440983edb8a3b4d4a4, type: 3}
   - {fileID: 6374540101646958667, guid: 842c0188aafe27441b4a70018f5156f5, type: 3}
-  - {fileID: 6906636386585586098, guid: d91955c21f8d9804e94f1b3addd8a71c, type: 3}
+  - {fileID: 1674876598, guid: 3d4979dc482f94b44bb3211281dae208, type: 3}
   maxNumberBanks: 5
   maxNumberLibaries: 2
   currentNumberBanks: 0
@@ -1306,11 +1381,17 @@ MonoBehaviour:
   npcList:
   - {fileID: 1984196013, guid: 233747708145ebb4c968edf247210640, type: 3}
   spawnPoints: []
+  numberOfEnvironment: 1000
+  environmentList:
+  - {fileID: 6348194230966753816, guid: e19d4da83b5661547b344f7d6a50a09d, type: 3}
+  - {fileID: 355495667, guid: a48a6650c98fdbe40bee8ffddf9d6139, type: 3}
+  - {fileID: 443456972, guid: d067832c13da83c468704dd8c2ae99b7, type: 3}
+  - {fileID: 1977570334, guid: 775d806f449355946b936e34d68162ee, type: 3}
+  - {fileID: 1765185358, guid: 33e1a0150d5fef44e9d3fbc376a7e274, type: 3}
+  - {fileID: 1762502930, guid: 9e5b59d92f91e8f459729edc3a5d1e0d, type: 3}
   maxShipNumber: 45
   maxShipSpacing: 30
   maxLoopDist: 650
-  terrainWidth: 0
-  terrainLength: 0
 --- !u!114 &2058832448
 MonoBehaviour:
   m_ObjectHideFlags: 0
