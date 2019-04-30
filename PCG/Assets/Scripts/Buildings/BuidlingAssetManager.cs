@@ -21,7 +21,7 @@ public class BuidlingAssetManager : MonoBehaviour
             if (item.tag != "Window")
                 continue;
 
-            isSpawned = Random.Range(0, 10);
+            isSpawned = Random.Range(0, 6);
 
             if(isSpawned == 1)
                 Instantiate(window, item.position, item.rotation).transform.SetParent(item);
