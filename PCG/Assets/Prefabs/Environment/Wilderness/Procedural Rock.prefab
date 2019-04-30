@@ -11,14 +11,15 @@ GameObject:
   - component: {fileID: 2176010892266937424}
   - component: {fileID: 2176010892266937431}
   - component: {fileID: 2176010892266937430}
-  - component: {fileID: 2176010892266937429}
   - component: {fileID: 2176010892266937428}
+  - component: {fileID: 1368412392}
+  - component: {fileID: 1368412391}
   m_Layer: 0
   m_Name: Procedural Rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2176010892266937424
 Transform:
@@ -79,19 +80,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &2176010892266937429
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2176010892266937435}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2176010892266937428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,3 +94,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vertexVariation: 1.25
   rockThreshold: 1
+--- !u!65 &1368412392
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2176010892266937435}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1368412391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2176010892266937435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44c7a960517190c4692272628bc7c24f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

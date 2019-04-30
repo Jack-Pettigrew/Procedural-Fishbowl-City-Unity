@@ -6,8 +6,10 @@ public class ShipBehaviour : MonoBehaviour
 {
     public static float speed = 5.0f;
 
-    private void Update()
+
+    private void FixedUpdate()
     {
-        transform.localPosition += transform.forward * speed * Time.deltaTime;
+        transform.position += transform.forward * speed * Time.fixedDeltaTime;
     }
+
 }

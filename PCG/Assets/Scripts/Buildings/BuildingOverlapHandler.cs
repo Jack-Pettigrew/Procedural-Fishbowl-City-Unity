@@ -5,8 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider), typeof(Rigidbody))]
 public class BuildingOverlapHandler : MonoBehaviour
 {
-    public bool stay = false;
-
     private void Start()
     {
         GetComponent<Rigidbody>().isKinematic = true;

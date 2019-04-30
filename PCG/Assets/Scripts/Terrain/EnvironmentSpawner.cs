@@ -13,7 +13,8 @@ public class EnvironmentSpawner : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(SpawnEnvironment());
+        if(!pm.disableAllPCG)
+            StartCoroutine(SpawnEnvironment());
     }
 
     IEnumerator SpawnEnvironment()

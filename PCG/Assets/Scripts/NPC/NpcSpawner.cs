@@ -5,15 +5,17 @@ using UnityEngine;
 public class NpcSpawner : MonoBehaviour
 {
     private ProceduralManager pm;
+    private LSystem ls;
 
     private void Awake()
     {
         pm = FindObjectOfType<ProceduralManager>();
+        ls = FindObjectOfType<LSystem>();
     }
 
     private void FixedUpdate()
     {
-        if (pm.npcsCount >= pm.maxNpcs)
+        if (pm.npcsCount >= (pm.maxNpcsPerGeneration * ls.generations))
             return;
 
         SpawnNPC();

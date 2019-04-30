@@ -14,7 +14,8 @@ public class ProceduralManager : MonoBehaviour
     public Transform npcParent;
     public Transform environmentParent;
 
-    [Header("Roads")]
+    [Header("City")]
+    public bool randomLsystemGeneration;
     private NavMeshSurface surface;
 
     [Header("Buildings"), Range(1, 50)]
@@ -29,16 +30,21 @@ public class ProceduralManager : MonoBehaviour
     public float[] randomYRotation = { 0, 90, 180, 270 };
     private static int buildingNumber = 0;
 
-    [Header("NPCs")]
+    [Header("PCG NPCs")]
     public int npcsCount = 0;
-    public int maxNpcs = 100;
+    public int maxNpcsPerGeneration = 150;
     public List<GameObject> npcList;
     [HideInInspector]
     public List<Transform> spawnPoints;
 
-    [Header("Environment"), Range(100, 2000)]
+    [Header("PCG Environment"), Range(100, 2000)]
     public int numberOfEnvironment = 5;
     public List<GameObject> environmentList;
+
+    [Header("City Traffic")]
+    public int maxTrafficNumber = 10;
+    public float maxTrafficSpacing = 10.0f;
+    public float maxTrafficLoopDist = 10.0f;
 
     [Header("Skyships")]
     public int maxShipNumber = 10;

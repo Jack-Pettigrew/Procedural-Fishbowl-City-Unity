@@ -44,6 +44,9 @@ public class LSystem : MonoBehaviour
     // Generates L-System
     private void Generate()
     {
+        if (pm.randomLsystemGeneration)
+            generations = Random.Range(1, 4);
+
         // Generation Iterations
         for (int i = 0; i < generations; i++)
         {

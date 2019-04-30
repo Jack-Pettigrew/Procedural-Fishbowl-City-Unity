@@ -24,7 +24,7 @@ public class ProceduralSkyTraffic : MonoBehaviour
         for (int x = 0; x < pm.maxShipNumber; x++)
         {
             int i = Random.Range(0, ships.Length);
-            GameObject ship = Instantiate(ships[i], spawnPos, transform.rotation);
+            GameObject ship = Instantiate(ships[i], spawnPos, transform.rotation, transform);
 
 
             ChangeShipColour(ship);

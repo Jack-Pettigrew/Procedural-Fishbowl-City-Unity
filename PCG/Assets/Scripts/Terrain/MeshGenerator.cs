@@ -40,11 +40,13 @@ public class MeshGenerator : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(isWater)
+        if (isWater)
+        {
             perlinOffset.x += 0.01f;
+            GenerateMesh();
+            ApplyMesh();
+        }
 
-        GenerateMesh();
-        ApplyMesh();
     }
 
     // Generate Mesh to use

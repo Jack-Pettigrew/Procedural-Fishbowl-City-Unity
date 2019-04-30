@@ -41,12 +41,6 @@ public class ProceduralRock : MonoBehaviour
 
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-            CalculateMesh();
-    }
-
     private void CalculateMesh()
     {
 
