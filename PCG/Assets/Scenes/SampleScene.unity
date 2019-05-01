@@ -239,7 +239,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &203365312
 GameObject:
@@ -464,7 +464,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &473712290
 MonoBehaviour:
@@ -519,7 +519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1162079286, guid: 68593f3aae9d0b9479ad8fcbe5a45ca4, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1162079286, guid: 68593f3aae9d0b9479ad8fcbe5a45ca4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -584,7 +584,7 @@ Transform:
   - {fileID: 1786558693}
   - {fileID: 697288789}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &697288788
 GameObject:
@@ -596,6 +596,7 @@ GameObject:
   m_Component:
   - component: {fileID: 697288789}
   - component: {fileID: 697288790}
+  - component: {fileID: 697288791}
   m_Layer: 0
   m_Name: CityTraffic 2
   m_TagString: Untagged
@@ -611,7 +612,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 697288788}
   m_LocalRotation: {x: -0, y: -0.0000009685754, z: -0, w: 1}
-  m_LocalPosition: {x: 290.2, y: 1.35, z: 5.4}
+  m_LocalPosition: {x: 20.14, y: 1.35, z: 5.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 684453033}
@@ -632,6 +633,18 @@ MonoBehaviour:
   ships:
   - {fileID: 9212140918876988512, guid: 748d38daddb4c894787351d5bf8b7dd2, type: 3}
   - {fileID: 2833037552774545767, guid: c81e29950aa7a2e4d916e5a812ca0eb7, type: 3}
+--- !u!114 &697288791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697288788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a604f63b3bba6f94f9912acccc3c425a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &720795660
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,7 +872,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1295270888
 GameObject:
@@ -1026,6 +1039,63 @@ Transform:
   m_Father: {fileID: 684453033}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1380736273
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 409654307, guid: 8e503cf7e435bd7468368af25d283672, type: 3}
+      propertyPath: m_Name
+      value: Fish_boid
+      objectReference: {fileID: 0}
+    - target: {fileID: 409654309, guid: 8e503cf7e435bd7468368af25d283672, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.245
+      objectReference: {fileID: 0}
+    - target: {fileID: 409654309, guid: 8e503cf7e435bd7468368af25d283672, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 409654309, guid: 8e503cf7e435bd7468368af25d283672, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 299.712
+      objectReference: {fileID: 0}
+    - target: {fileID: 409654309, guid: 8e503cf7e435bd7468368af25d283672, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 409654309, guid: 8e503cf7e435bd7468368af25d283672, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 409654309, guid: 8e503cf7e435bd7468368af25d283672, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 409654309, guid: 8e503cf7e435bd7468368af25d283672, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 409654309, guid: 8e503cf7e435bd7468368af25d283672, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 409654309, guid: 8e503cf7e435bd7468368af25d283672, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 409654309, guid: 8e503cf7e435bd7468368af25d283672, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 409654309, guid: 8e503cf7e435bd7468368af25d283672, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8e503cf7e435bd7468368af25d283672, type: 3}
 --- !u!1 &1397611193
 GameObject:
   m_ObjectHideFlags: 0
@@ -1432,7 +1502,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2058832447
 MonoBehaviour:
@@ -1450,13 +1520,13 @@ MonoBehaviour:
   buildingParent: {fileID: 153153218}
   npcParent: {fileID: 1331929591}
   environmentParent: {fileID: 146106268}
-  randomLsystemGeneration: 0
+  randomLsystemGeneration: 1
   buildingsMaxMid: 10
   buidlingBases:
   - {fileID: 885631957785374770, guid: fd6b3ca2a9368ad47b650ff83b65705f, type: 3}
   - {fileID: 3782303177070818479, guid: a8c18c297988c6440983edb8a3b4d4a4, type: 3}
   - {fileID: 6374540101646958667, guid: 842c0188aafe27441b4a70018f5156f5, type: 3}
-  - {fileID: 6906636386585586098, guid: d91955c21f8d9804e94f1b3addd8a71c, type: 3}
+  - {fileID: 6692548635083255633, guid: 90b597d6d7560bb459977d4c7af9c584, type: 3}
   maxNumberBanks: 5
   maxNumberLibaries: 2
   currentNumberBanks: 0
@@ -1479,7 +1549,6 @@ MonoBehaviour:
   - {fileID: 1977570334, guid: 775d806f449355946b936e34d68162ee, type: 3}
   - {fileID: 1765185358, guid: 33e1a0150d5fef44e9d3fbc376a7e274, type: 3}
   - {fileID: 1762502930, guid: 9e5b59d92f91e8f459729edc3a5d1e0d, type: 3}
-  - {fileID: 2176010892266937435, guid: 91411f1f9594572409a3c693e56c80f7, type: 3}
   maxTrafficNumber: 60
   maxTrafficSpacing: 12
   maxTrafficLoopDist: 600

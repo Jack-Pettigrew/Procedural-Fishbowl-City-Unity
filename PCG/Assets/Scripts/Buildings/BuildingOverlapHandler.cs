@@ -13,7 +13,7 @@ public class BuildingOverlapHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.name == "Bank(Clone)" || other.name == "Library(Clone)")
+        if(other.name == "Bank(Clone)" || other.name == "Book_House(Clone)")
         {
             Destroy(gameObject);
         }

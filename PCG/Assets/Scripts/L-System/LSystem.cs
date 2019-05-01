@@ -19,6 +19,7 @@ public class LSystem : MonoBehaviour
     private Dictionary<char, string> rules = new Dictionary<char, string>();          // Axiom Rule set
 
     private ProceduralManager pm;
+    private HorizontalTrafficPCG trafficPCG;
 
     private void Start()
     {
@@ -37,6 +38,11 @@ public class LSystem : MonoBehaviour
         // Generate Roads
         Generate();
         Build();
+
+        trafficPCG = FindObjectOfType<HorizontalTrafficPCG>();
+
+        if(trafficPCG)
+            CalculateNewBounds(roadParent);
 
         pm.BakeRoadNavMesh();
     }
@@ -153,4 +159,30 @@ public class LSystem : MonoBehaviour
             }
         }
     }
+
+    // Code found and modified from: https://stackoverflow.com/questions/11949463/how-to-get-size-of-parent-game-object
+    private void CalculateNewBounds(Transform parent)
+    {
+        // First find a center for your bounds.
+        Vector3 center = Vector3.zero;
+
+        foreach (Transform child in parent.transform)
+        {
+            center += child.gameObject.GetComponent<Renderer>().bounds.center;
+        }
+
+        // Center is average center of children
+        center /= parent.transform.childCount;
+
+        // Now you have a center, calculate the bounds by creating a zero sized 'Bounds', 
+        Bounds bounds = new Bounds(center, Vector3.zero);
+
+        foreach (Transform child in parent.transform)
+        {
+            bounds.Encapsulate(child.gameObject.GetComponent<Renderer>().bounds);
+        }
+
+        trafficPCG.UpdateTrafficPosition(bounds.size);
+    }
+
 }

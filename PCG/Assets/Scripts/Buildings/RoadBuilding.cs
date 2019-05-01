@@ -63,21 +63,21 @@ public class RoadBuilding : MonoBehaviour
                 }
                 else
                 {
-                    while (buildingBase.name == "Bank" || buildingBase.name == "Library")
+                    while (buildingBase.name == "Bank" || buildingBase.name == "Book_House")
                     {
                         buildingBase = pm.buidlingBases[Random.Range(0, maxBases)];
                     }
                 }
                 break;
 
-            case "Library":
+            case "Book_House":
                 if (Random.Range(0, 19) == 0 && pm.currentNumberLibraries < pm.maxNumberLibaries)
                 {
                     pm.currentNumberLibraries++;
                 }
                 else
                 {
-                    while (buildingBase.name == "Library" || buildingBase.name == "Bank")
+                    while (buildingBase.name == "Book_House" || buildingBase.name == "Bank")
                     {
                         buildingBase = pm.buidlingBases[Random.Range(0, maxBases)];
                     }
