@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 5968871247948117232}
   m_Layer: 0
   m_Name: Book_House
-  m_TagString: Untagged
+  m_TagString: City
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
