@@ -29,7 +29,7 @@ public class EnvironmentSpawner : MonoBehaviour
 
             Vector3 randomPosition = GetRandomTerrainPosition(width, length, terrain);
 
-            asset = Instantiate(asset, randomPosition, Quaternion.identity, pm.environmentParent);
+            asset = Instantiate(asset, randomPosition, asset.transform.rotation, pm.environmentParent);
             asset.transform.localScale *= Random.Range(0.5f, 2.0f);
         }
 
