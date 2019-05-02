@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6019409682620328370}
   - component: {fileID: 2359372091882511178}
   - component: {fileID: 6870925426301677605}
-  - component: {fileID: 912641998}
+  - component: {fileID: 8574055855448312147}
   m_Layer: 0
   m_Name: SBSP_House
   m_TagString: City
@@ -81,8 +81,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &912641998
-BoxCollider:
+--- !u!136 &8574055855448312147
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -91,6 +91,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 19.37855, y: 32.982304, z: 18.9918}
-  m_Center: {x: -0.93934345, y: 16.491175, z: -0.13350105}
+  m_Radius: 43.57
+  m_Height: 164.91148
+  m_Direction: 1
+  m_Center: {x: -0.6, y: 61.37, z: -0.667446}
